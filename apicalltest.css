@@ -1,0 +1,103 @@
+body {
+	background-color: #94B8AA;
+	color: #357DD8;
+	font-size: medium;
+	font-family: 'Trebuchet MS', 'MS Sans Serif', 'Verdana';
+	padding: 0;
+	margin: 0;
+ 	position: static;
+}
+
+#container {
+	background-color: #424242;
+	color: #F9DE6B;
+	padding: 15px;
+	width: 400px;
+	font-weight: bold;
+	position: absolute;
+	float: left;
+	top: 50%;
+	left: 50%;	
+	margin-top: -50px;
+	margin-left: -200px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	text-align: center;
+}
+
+#apiRequestSubmit {
+	color: #720CA4;
+	padding: 2px;
+	background-color: #8BB60E;
+	font-weight: bold;
+	margin: 5px;
+	border: 1px solid #666;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+
+#apiRequestSubmit:hover, #apiRequestSubmit:focus{
+	background-color: #0CA40E;
+	border: 1px groove #666;
+}
+
+#apiRequestSubmit:active {
+	/*Enter the split second code*/
+}
+
+#apiRequestSubmit:disabled {
+	background-color: #cccccc;
+	color: #999999;
+}
+
+#apiURLBar {
+	text-align: center;
+	padding: 1px 15px;
+	width: 350px;
+	height: 30px;
+	font-size: 1em;
+	margin: 2px;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	font-family: 'courier new', 'verdana';
+	border: 0;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+}
+
+#apiURLBar:focus {
+	border: 1px;
+	color: #007EFF;
+	background-color: #FFFDA8;
+	font-size: .75em;
+}
+
+#container label {
+	text-align: left !important; /*Doesn't work*/
+	font-size: 1.2em;
+	/* color: #fff; */
+}
+
+#outputXML {
+	visibility: hidden;
+	text-align: left;
+	width: 600px;
+	top: 200px;
+	left: 50%;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: -300px;
+	position: absolute;
+	background-color: #58525C;
+	color: #F7AE43;
+	padding: 10px;
+ 	overflow: auto;
+}
+
+/* #outputXML pre {
+	word-wrap: normal;
+} */

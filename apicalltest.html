@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>API Call Test</title>
+    <link rel="stylesheet" href="apicalltest.css" media="screen, projection">
+	<script src="global_apicalltest.js"></script>
+    <script src="doublescroll.js"></script>
+    <script src="apicalltest.js"></script>
+
+	<noscript>
+		<style>
+		#container {
+			visibility: hidden !important;
+		}
+		#noscript {
+			visibility: visible !important;
+			width: 600px;
+			height: 50px;
+			margin-left: -300px;
+			margin-top: -25px;
+			padding: 15px;
+			background-color: #DDFFEE;
+			color: #E7211E;
+			top: 50%;
+			left: 50%;
+			position: absolute;
+			text-align: center;
+			font-weight: bold;
+			font-size: 3em;
+			cursor: default;
+			-webkit-border-radius: 50px;
+			-moz-border-radius: 50px;
+			border-radius: 50px;
+			/* vertical-align: middle; */
+		}
+		body {
+			background-color: #FFDDAA;
+			color: #FFDDAA;
+		}
+		</style>
+	</noscript>
+</head>
+
+<body>
+    <div id="noscript" style="visibility:hidden;">
+        <span>Please enable Javascript</span>
+    </div>
+
+    <div id="container">
+        <form action="" id="apiRequest" name="apiRequest">
+            <label for="apiURLBar" form="apiRequest">Search API Request<br>
+            <input type="url" value="Enter API Request URL" max="1000" id="apiURLBar"></label><br>
+            <input type="submit" value="Get API Request" id="apiRequestSubmit">
+        </form>
+		<span> E.g. http://www.uxbooth.com/articles/creating-usable-links-and-buttons </span>
+    </div>
+	<div id="outputXML"><pre></pre></div>
+</body>
+</html>

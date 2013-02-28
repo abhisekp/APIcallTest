@@ -1,0 +1,59 @@
+/*
+Author: Abhisek Pattnaik
+Desc: Call XML APIs
+ */
+
+var api;
+
+/*
+@TODO:
+responseType <string>[optional = GET]: "GET" OR "POST"
+url <string>: e.g. "http://thegamesdb.net/api/GetGame.php?name=crysis"
+async <boolean>[optional = true]: true OR false
+ */
+function apiCall(url, responseType, async) {
+	"use strict";
+
+	var outputXML = document.getElementById("outputXML");
+	var container = document.getElementById("container");
+	var apiRequestSubmit = document.getElementById("apiRequestSubmit");
+
+	if (window.XMLHttpRequest) {
+		api = new XMLHttpRequest();
+	} else {
+		api = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+
+	responseType = (responseType === "POST") ? "POST" : "GET";
+	async = (async === false) ? false : true;
+	api.open(responseType, url, async);
+	api.send();
+
+	api.onreadystatechange = function () {
+		if (api.readyState !== 4 || api.status !== 200) {
+			//apiRequestSubmit.disabled = true;
+			outputXML.style.visibility = "hidden";
+			container.style.position = "absolute";
+			container.style.marginLeft = "-200px";
+			container.style.marginTop = "-50px";
+			container.style.top = "50%";
+			container.style.left = "50%";
+		}
+		outputXML.getElementsByTagName("pre")[0].textContent = (api.status) + "\n";
+		if ((api.readyState === 4 && api.status === 200)) {
+			//apiRequestSubmit.disabled = false;
+			var apiText = api.responseText;
+			outputXML.getElementsByTagName("pre")[0].textContent = apiText;
+			container.style.position = "fixed";
+			container.style.marginLeft = "0";
+			container.style.marginTop = "0";
+			container.style.top = "20px";
+			container.style.left = "20px";
+			outputXML.style.visibility = "visible";
+			alert("Success");
+			/* DoubleScroll(outputXML); */
+		} else {
+			//apiRequestSubmit.disabled = false;
+		}
+	};
+}
