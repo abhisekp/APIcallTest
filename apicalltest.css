@@ -8,6 +8,17 @@ body {
  	position: static;
 }
 
+a, a:visited, a:active{
+	font-family: 'Verdana', 'MS Sans Serif';
+	color: #FD3710;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #C49EE7;
+	cursor: hand;
+}
+
 #container {
 	background-color: #424242;
 	color: #F9DE6B;
