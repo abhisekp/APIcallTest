@@ -8,6 +8,8 @@
 		var container = document.getElementById("container");
 		var outputXML = document.getElementById("outputXML");
 		var apiURLBar_defVal = "Enter API Request URL";
+		
+		container.style.visibility = "visible";
 
 		apiRequest.onsubmit = function () {
 			apiCall(apiURLBar.value, "GET", true);

@@ -35,6 +35,7 @@ a:hover{
 	-moz-border-radius: 20px;
 	border-radius: 20px;
 	text-align: center;
+	visibility: hidden;
 }
 
 #apiRequestSubmit {
