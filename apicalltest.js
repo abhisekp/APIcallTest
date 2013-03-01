@@ -34,7 +34,7 @@ function apiCall(url, responseType, async) {
 			apiRequestSubmit.disabled = false;
 			var apiText = api.responseText;
 			outputXML.getElementsByTagName("pre")[0].textContent = apiText;
-			container.style.cursor = "pointer !important";
+			container.style.cursor = "pointer";
 			container.style.position = "fixed";
 			container.style.marginLeft = "0";
 			container.style.marginTop = "0";
@@ -45,7 +45,7 @@ function apiCall(url, responseType, async) {
 		} else if (api.readyState !== 4 || api.status !== 200) {
 			apiRequestSubmit.disabled = true;
 			outputXML.style.visibility = "hidden";
-			container.style.cursor = "wait !important";
+			container.style.cursor = "wait";
 			container.style.position = "absolute";
 			container.style.marginLeft = "-200px";
 			container.style.marginTop = "-50px";
@@ -56,8 +56,11 @@ function apiCall(url, responseType, async) {
 
 	api.onerror = function () {
 		apiRequestSubmit.disabled = false;
+		container.style.cursor = "pointer";
 	};
 
-	api.open(responseType, url + ((/\?/).test(url) ? "&" : "?") + "apictest=" + Math.random(), async);
+	//	api.setRequestHeader('Content-Type', 'text/html');
+	url += ((/\?/).test(url) ? "&" : "?") + "apictest=" + Math.random();
+	api.open(responseType, "http://www.somefacts101.tk/sf101/APIcallTest.php?proxy=" + url, async);
 	api.send(null);
 }
