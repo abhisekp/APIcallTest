@@ -38,7 +38,7 @@ function apiCall(url, responseType, async) {
 			container.style.position = "fixed";
 			container.style.marginLeft = "0";
 			container.style.marginTop = "0";
-			container.style.top = "20px";
+			container.style.top = "150px";
 			container.style.left = "20px";
 			outputXML.style.visibility = "visible";
 			/* DoubleScroll(outputXML); */
