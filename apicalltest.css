@@ -2,12 +2,13 @@ body {
 	background-color: #FF83E3;
 	background-image: url("digitize.png");
 	background-repeat: repeat;
+	background-attachment: fixed;
 	color: #357DD8;
 	font-size: medium;
 	font-family: 'Trebuchet MS', 'MS Sans Serif', 'Verdana';
 	padding: 0;
 	margin: 0;
- 	position: static;
+	padding: static;
 }
 
 a, a:visited, a:active{
