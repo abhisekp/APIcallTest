@@ -7,7 +7,7 @@
 		var apiRequestSubmit = document.getElementById("apiRequestSubmit");
 		var container = document.getElementById("container");
 		var outputXML = document.getElementById("outputXML");
-		var apiURLBar_defVal = "Enter API Request URL";
+		var apiURLBar_defVal = "Enter URL";
 		
 		container.style.visibility = "visible";
 

@@ -1,5 +1,7 @@
 body {
-	background-color: #94B8AA;
+	background-color: #C4F1FF;
+	background-image: url("giantlifescreen.jpg");
+	background-repeat: no-repeat;
 	color: #357DD8;
 	font-size: medium;
 	font-family: 'Trebuchet MS', 'MS Sans Serif', 'Verdana';
@@ -67,6 +69,9 @@ a:hover{
 	border-radius: 20px;
 	text-align: center;
 	visibility: hidden;
+	-webkit-box-shadow: 0px 0px .5em .2em #A491FF;
+	-moz-box-shadow: 0px 0px .5em .2em #A491FF;
+	box-shadow: 0px 0px .5em .2em #A491FF;
 	z-index: 30;
 }
 
