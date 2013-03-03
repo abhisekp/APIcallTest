@@ -62,6 +62,6 @@ function apiCall(url, responseType, async) {
 	//	api.setRequestHeader('Content-Type', 'text/html');
 	url += ((/\?/).test(url) ? "&" : "?") + "apictest=" + Math.random();
 	api.open(responseType, "APIcallTest.php?proxy=" + url, async);
-//	api.open(responseType, "proxy.php?url=" + url, async);
+//	api.open(responseType, "basicproxy.php?url=" + url, async);
 	api.send(null);
 }

@@ -1,0 +1,1 @@
+<php? if(!strpos($_GET['url'],'http://')) fpassthru(fopen($_GET['url'])) ?>
